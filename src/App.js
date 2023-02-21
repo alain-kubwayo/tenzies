@@ -52,7 +52,6 @@ function App() {
     const allSameValue = dice.every(die => die.value === firstValue);
     if(allHeld && allSameValue){
       setTenzies(true);
-      console.log("You won!");
     }
   }, [dice])
   
@@ -60,7 +59,7 @@ function App() {
     <main className="bg-[#F5F5F5] h-[40vh] max-w-[800px] mx-auto rounded-xl p-5 flex flex-col items-center justify-between">
       {tenzies && <Confetti />}
       <div className="text-center">
-        <h1 className="text-2xl font-extrabold uppercase text-sky-900 my-4">Tenzies</h1>
+        <h1 className="my-4 text-2xl font-extrabold uppercase text-sky-900">Tenzies</h1>
         <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       </div>
       <div className="grid grid-cols-5 gap-5">
